@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Global Consultoría IT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>GLOBAL</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nosotros.html" class="nav-link">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="servicios.html" class="nav-link">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sectores.html" class="nav-link">Sectores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link active">Contacto</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Contáctanos</h1>
+                <p>Estamos aquí para ayudarte con tus proyectos tecnológicos</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Información de Contacto</h2>
+                        <div class="info-item">
+                            <h3>Dirección</h3>
+                            <p>Av. Principal 123, Ciudad Autónoma de Buenos Aires</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Teléfono</h3>
+                            <p>+54 11 1234-5678</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Email</h3>
+                            <p>info@global-it.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Horarios</h3>
+                            <p>Lunes a Viernes: 9:00 - 18:00<br>
+                                Sábados: 9:00 - 13:00</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Envíanos un Mensaje</h2>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                                <span class="error-message" id="nombre-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono">
+                                <span class="error-message" id="telefono-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="empresa">Empresa</label>
+                                <input type="text" id="empresa" name="empresa">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="servicio">Servicio de Interés</label>
+                                <select id="servicio" name="servicio">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="desarrollo-web">Desarrollo Web</option>
+                                    <option value="consultoria">Consultoría IT</option>
+                                    <option value="soporte">Soporte Técnico</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje *</label>
+                                <textarea id="mensaje" name="mensaje" rows="6" required
+                                    placeholder="Describe tu proyecto o consulta..."></textarea>
+                                <span class="error-message" id="mensaje-error"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="acepto" name="acepto" required>
+                                <label for="acepto">Acepto los términos y condiciones y la política de privacidad
+                                    *</label>
+                                <span class="error-message" id="acepto-error"></span>
+                            </div>
+
+                            <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                        </form>
+
+                        <div id="success-message" class="success-message" style="display: none;">
+                            <h3>¡Mensaje enviado correctamente!</h3>
+                            <p>Nos pondremos en contacto contigo en las próximas 24 horas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Global Consultoría IT. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

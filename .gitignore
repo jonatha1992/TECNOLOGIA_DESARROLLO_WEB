@@ -1,0 +1,14 @@
+# Compressed files
+*.zip
+*.7z
+*.rar
+*.gz
+*.tgz
+*.bz2
+*.tar
+*.xz
+*.iso
+*.jar
+*.war
+*.ear
+*.dmg
