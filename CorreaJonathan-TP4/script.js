@@ -48,17 +48,20 @@ function borrarUltimo() {
 function calcular() {
     try {
         let expresion = pantalla.value;
-        expresion = expresion.replace(/×/g, '*');
+        expresion = expresion.replace(/×/g, '*').replace(/÷/g, '/');
 
-        if (expresion.includes('/0')) {
-            mostrarError('No se puede dividir por cero');
+        // Normalizar ceros a la izquierda no decimales para evitar problemas con números enteros
+        expresion = expresion.replace(/\b0+(\d+)\b/g, '$1');
+
+        if (!/^[\d+\-*/.() ]+$/.test(expresion)) {
+            mostrarError('Error');
             return;
         }
 
-        let resultado = eval(expresion);
+        const resultado = Function('"use strict"; return (' + expresion + ')')();
 
         if (!isFinite(resultado)) {
-            mostrarError('Error');
+            mostrarError('No se puede dividir por cero');
             return;
         }
 
