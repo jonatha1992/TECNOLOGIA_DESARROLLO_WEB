@@ -1,0 +1,6 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "serve workspace", "type": "shell", "command": "npx --yes http-server . -p 5500", "options": { "cwd": "${workspaceFolder}" }, "isBackground": true, "problemMatcher": [] , "group": "build" }
+  ]
+}
